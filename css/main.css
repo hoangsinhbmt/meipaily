@@ -1,0 +1,344 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+ }
+ body{
+     font-size: 1rem;
+ }
+ html{
+     font-size: 1.5rem;
+ }
+ .container{
+    width: 80%;
+    margin: auto;    
+}
+/* header */
+header{
+    height: 100px;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #fff;  
+}
+.header__container{
+    height: 100px;
+    background-color: transparent;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__container a{
+    color: white;
+    font-weight: bold;
+}
+nav a{
+    margin-right: 20px;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+nav a:hover,
+nav .active{
+    color: #e62b4a;
+}
+.carousel{
+    height: 1000px;
+    background-image: url(../images/home_slider.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.carousel__content{
+    text-align: center;
+    width: 40%;
+    color: #fff;
+}
+.carousel__content h2{
+ margin: 15px 0;
+ font-size: 3rem;
+}
+.carousel__content button{
+    font-size: 0.8rem;
+    width: 130px;
+    height: 50px;
+    color: #fff;
+    background-color: #e62b4a;
+    border: none;
+    transition: 0.5s;
+}
+.carousel__content button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+.animation__icon{
+    font-size: 2rem;
+    animation: animationdown 2s 0s infinite;
+}
+@keyframes animationdown{
+  from{
+      transform: translate(0);
+      opacity: 1;
+  }
+  to{
+      transform: translateY(50px);
+      opacity: 0;
+  }
+}
+.service{
+    background-color: black;
+    padding: 100px;
+    height: 900px;
+}
+.service .container{
+    text-align: center;
+    height: 800px;
+}
+.service .service__title p{
+    font-size: 0.7rem;
+}
+.service .service__title h2{
+    text-transform: uppercase;
+    margin: 15px 0;
+    font-size: 2rem;
+    color: #fff;
+
+}
+.service .service__title p:first-of-type{
+    color: #e62b4a;
+}
+.service .service__title p:last-of-type{
+    color: #888888;
+}
+.service__slider{
+    color: white;
+    margin-top: 50px;
+}
+.slick-slider{
+    display: flex;
+}
+.slider__item__content i{
+    font-size: 2rem;
+}
+.slider__item__content{
+    background-color: white;
+    color: #888888;
+    height: 200px;
+    margin: 0 15px;
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__item__content::before{
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 5px;
+    background-color: red;
+    right: 0;
+    top: 0;
+    transition: 0.3s;
+}
+.slider__item__content:hover::before{
+    height: 100%;
+}
+.slick-dots li button::before {
+    margin-top: 10px;
+    color: #f8f8f8;
+    font-size: 0.5rem;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: red;
+}
+/* header */
+.showcase{
+ margin-top: 100px;
+}
+.showcase__title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.showcase__title p{
+   font-size: 0.7rem;
+   margin: 20px 0;
+}
+.showcase__list{
+    width: 80%;
+    margin: auto;
+}
+.showcase_items{
+    position: relative;
+    height: 400px;
+    width: 400px;
+}
+.showcase_items img{   
+    filter: grayscale(100%) contrast(50%);
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.showcase .showcase__list{
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    gap: 30px;
+}
+.showcase_overlay{
+    position: absolute;
+    background-color: rgba(230, 43, 74,0.7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.showcase_overlay:hover{
+    opacity: 1;
+}
+.showcase_overlay:hover .overlay__icon,
+.showcase_overlay:hover .overlay__title{
+    transform: translateY(-30px);
+    transition: 0.3s;
+    opacity: 1;
+}
+.overlay__icon{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    top:50px;
+    right: 20px;
+    position: absolute;
+    text-align: center;
+    line-height: 30px;
+    opacity: 0;
+    font-size: 15px;
+}
+.overlay__title{
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    color: #fff;
+    opacity: 0;
+    transition: 0.3s;
+}
+.overlay__title p:last-child{
+    font-weight: bold;
+}
+/* blog */
+.blog{
+    margin-top: 70px;
+}
+.blog_title{
+    text-align: center;
+    margin: 50px 0;
+}
+.blog_title p{
+    font-size: 0.7rem;
+    margin: 20px 0;
+}
+.blog_item img{
+   width: 100%;
+   filter: grayscale(30%) contrast(30%);
+   transition: 0.5s;
+   display: block;
+}
+.blog_item img:hover{
+  filter: grayscale(0) contrast(100%);
+}
+.blog_content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.item1{
+    grid-column: 1 / span 2;
+    grid-row: 1/span 2;
+}
+.item10{
+    grid-column: 3 / span 2;
+    grid-row: 3/span 2;
+}
+
+/* number */
+.number{
+    background-color: black;
+    color: #fff;
+    padding: 4rem 0;
+}
+.number_items span{
+    font-size: 2rem;
+}
+.number_items p{
+    color: gray;
+}
+.number_items{
+    text-align: center;
+}
+.number_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+/* contact */
+.contact{
+    margin-top: 70px;
+}
+.contact_content-title{
+    text-align: center;
+}
+.contact_content-title p{
+    font-size: 0.7rem;
+    margin: 20px 0;
+}
+.contact_content{
+    display: flex;
+    height: 400px;
+}
+.contact_content-left{
+   width: 60%;
+   padding-right: 20px;
+}
+.contact_content-left iframe{
+    height: 100%;
+    width: 100%;
+}
+.contact_content-right{
+    width: 40%;
+    height: 100%;
+}
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.contact_form input,
+.contact_form button{
+    height: 50px;
+    font-size: 0.7rem;
+}
+.contact_form input,
+.contact_form textarea{
+    padding-left: 20px;
+    font-size: 0.7rem;
+}
+.contact_form button{
+    color: #fff;
+    background-color: black;
+}
